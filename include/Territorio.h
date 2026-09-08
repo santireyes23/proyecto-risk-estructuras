@@ -1,3 +1,5 @@
+#include
+
 class Territorio{
     private:
     string codigo;
@@ -7,9 +9,9 @@ class Territorio{
     vector<string> vecinos;
 
     public:
-    Territorio crearTerritorio();
-    bool asignarOcupante();
-    bool esVecino();
-    bool agregarUnidades();
-    bool quitarUnidades();
-    }
+    Territorio (string codigo, string continente, vector<string> vecinos);
+    bool asignarOcupante(string color, int cantidadUnidades);
+    bool esVecino(string codigoOtroTerritorio);
+    bool agregarUnidades(int cantidad);
+    bool quitarUnidades(int cantidad);
+    };
